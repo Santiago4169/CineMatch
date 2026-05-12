@@ -278,6 +278,22 @@ class TMDBClient:
         """
         return self._request(f"/movie/{movie_id}/credits")
 
+    def get_movie_keywords(self, movie_id: int) -> list[str]:
+        """Retorna las palabras clave asociadas a una película.
+
+        Args:
+            movie_id: Identificador numérico de TMDB.
+
+        Returns:
+            Lista de strings con los nombres de las keywords.
+
+        Raises:
+            TMDBNotFoundError: Si el ID no corresponde a ninguna película.
+            TMDBError: Ante cualquier otro fallo de red o API.
+        """
+        data = self._request(f"/movie/{movie_id}/keywords")
+        return [kw["name"] for kw in data.get("keywords", [])]
+
     # -----------------------------------------------------------------------
     # Utilidades
     # -----------------------------------------------------------------------
