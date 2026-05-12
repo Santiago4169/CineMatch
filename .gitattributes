@@ -1,0 +1,26 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force LF line endings for scripts and config files
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+# Force CRLF for Windows-specific files (none for now, pero queda preparado)
+# *.bat text eol=crlf
+
+# Treat as binary (no normalization)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.pdf binary
+*.sqlite binary
