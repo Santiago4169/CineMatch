@@ -18,5 +18,5 @@ if _missing:
         "Copia .env.example como .env y rellena las claves."
     )
 
-CHROMA_DB_PATH: str = "chroma_db"
+CHROMA_DB_PATH: str = "data/chroma_db"
 DATA_DIR: str = "data"
